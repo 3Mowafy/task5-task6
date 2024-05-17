@@ -1,0 +1,39 @@
+<section class="container">
+  <app-home-btn></app-home-btn>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Active Users</h1>
+      <ul class="list-group">
+        <ng-container *ngFor="let user of activeorIn.Users; let i = index">
+          <li class="list-group-item" *ngIf="user.active === true">
+            <strong>{{ user.name }} </strong>|
+            <span
+              class="text-danger"
+              [ngStyle]="{ cursor: 'pointer' }"
+              (click)="setToActive(i)"
+              >Set To Inactive</span
+            >
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+
+    <div class="col-12 mt-4">
+      <h1>Inactive Users</h1>
+      <ul class="list-group">
+        <ng-container *ngFor="let user of activeorIn.Users; let i = index">
+          <li class="list-group-item" *ngIf="user.active === false">
+            <strong>{{ user.name }}</strong> |
+            <span
+              class="text-success"
+              [ngStyle]="{ cursor: 'pointer' }"
+              (click)="setToActive(i)"
+              >Set To Active</span
+            >
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</section>

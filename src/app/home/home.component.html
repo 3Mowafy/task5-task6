@@ -1,0 +1,30 @@
+<div
+  class="container d-flex justify-content-center align-items-center"
+  [ngStyle]="{
+    height: '100vh',
+    gap: '10px',
+    'font-size': '25px',
+    'font-weight': 'bold'
+  }"
+>
+  <div
+    routerLink="task-5"
+    [ngClass]="taskClass"
+    [ngStyle]="{ cursor: 'pointer' }"
+    data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000"
+  >
+    Task 5
+  </div>
+  <div
+    routerLink="task-6"
+    [ngClass]="taskClass"
+    [ngStyle]="{ cursor: 'pointer' }"
+    data-aos="flip-right"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000"
+  >
+    Task 6
+  </div>
+</div>

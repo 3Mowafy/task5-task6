@@ -1,0 +1,19 @@
+<section class="container">
+  <app-home-btn></app-home-btn>
+  <app-game-control></app-game-control>
+  <div class="row">
+    <div
+      *ngFor="
+        let num of game.storeNumbers;
+        let i = index;
+        let o = odd;
+        let e = even
+      "
+      class="col-md-6 col-lg-4 col-xl-3 mt-3"
+    >
+      <app-odd *ngIf="o" [oddNumber]="i"></app-odd>
+
+      <app-even *ngIf="e" [evenNumber]="i"></app-even>
+    </div>
+  </div>
+</section>
